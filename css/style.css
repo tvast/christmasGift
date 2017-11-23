@@ -30,48 +30,48 @@ input#thing1[type=checkbox] + label
 background-image: url("assets/weding.png");
 border-color: white;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 width:300px;
 	height: 300px;
 display:inline-block;
 padding: 0 0 0 0px;
-background-size: 400px;
+background-size: 300px;
 }
 input#thing2[type=checkbox] + label
 {
 background-image: url("assets/baby.png");
 border-color: white;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 width:300px;
 	height: 300px;
 display:inline-block;
 padding: 0 0 0 0px;
-background-size: 400px;
+background-size: 300px;
 }
 input#thing3[type=checkbox] + label
 {
 background-image: url("assets/trip.png");
 border-color: white;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 width:300px;
 	height: 300px;
 display:inline-block;
 padding: 0 0 0 0px;
-background-size: 400px;
+background-size: 300px;
 }
 input#thing4[type=checkbox] + label
 {
 background-image: url("assets/diploma.png");
 border-color: white;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 width:300px;
 	height: 300px;
 display:inline-block;
 padding: 0 0 0 0px;
-background-size: 400px;
+background-size: 300px;
 }
 
 input#thing5[type=checkbox] + label
@@ -79,31 +79,31 @@ input#thing5[type=checkbox] + label
 background-image: url("assets/man3.png");
 border-color: white;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 width:300px;
 	height: 300px;
 display:inline-block;
 padding: 0 0 0 0px;
-background-size: 400px;
-background-size: 400px;
+
+background-size: 300px;
 }
 input#thing6[type=checkbox] + label
 {
 background-image: url("assets/woman3.png");
 border-color: white;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 	width:300px;
 	height: 300px;
 display:inline-block;
 padding: 0 0 0 0px;
-background-size: 400px;
+background-size: 300px;
 }
 input#thing1[type=checkbox]:checked + label
 {
 border-color: red;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 width:300px;
 	height: 300px;
 display:inline-block;
@@ -113,7 +113,7 @@ input#thing2[type=checkbox]:checked + label
 {
 border-color: red;
 border-style: solid;
-border-radius: 50%;
+/*border-radius: 50%;*/
 width:300px;
 	height: 300px;
 display:inline-block;

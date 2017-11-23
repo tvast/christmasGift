@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Le cadeau de l'IFE</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,12 +26,12 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
+      <h1 class="header center blue-text">Le cadeau idéal</h1>
       <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <h5 class="header col s12 light">Trouver le cadeau idéal pour vos proches</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light blue">Get Started</a>
       </div>
       <br><br>
 
@@ -39,42 +39,7 @@
   </div>
 
 
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br><br>
-  </div>
+  
 
   <!-- selection item -->
   <div class="container">
@@ -106,7 +71,7 @@
   </div> -->
 
   <div class="center">
-    <a onclick="generateGift()" class="waves-effect waves-light btn">Cadeau idéal</a>
+    <a onclick="generateGift()" class="waves-effect waves-light btn light-blue">Cadeau idéal</a>
     <h2 id="textFinal"></h2>
     <img class="rounded " id="gift" src="">
   </div>
@@ -115,12 +80,12 @@
 
   
 
-  <footer class="page-footer orange">
+  <footer class="page-footer blue">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <!-- <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p> -->
 
 
         </div>
@@ -159,41 +124,100 @@
   <script type="text/javascript">
     function generateGift () {
       var texte
-      var foo = document.getElementById('thing5').value
-      console.log(foo)
+      var things1 = document.getElementById('thing1').checked
+      var things2 = document.getElementById('thing2').checked
+      var things3 = document.getElementById('thing3').checked
+      var things4 = document.getElementById('thing4').checked
+      var things5 = document.getElementById('thing5').checked
+      var things6 = document.getElementById('thing6').checked
 
-     var checkedBox = document.querySelector('.messageCheckbox').checked;
-     // checkedBox = false;
-     console.log(checkedBox)
+      console.log(things1)
+      console.log(things2)
+      console.log(things3)
+      console.log(things4)
+      console.log(things5)
+      console.log(things6)
 
-      if (checkedBox == true) {
 
-        texte= "le cadeau est";
+     // var checkedBox = document.querySelector('.messageCheckbox').checked;
+     // // checkedBox = false;
+     // console.log(checkedBox)
 
+     
 
+      if (things5 == true ) {
+
+        texte= "le cadeau génial est";
       }
-      else {
-        texte = " ";
+      
+      if (things6 == true) {
+
+        texte= "le cadeau de rêve est";
       }
+      
 
       // tableau de cadeau
       var pic = ['une trotinette', 'un vélo', 'un cours de français', 'un cours en ligne', 'un saut à lelastique', 'un pack culture'];
+      
       var titre = ['Mamy', 'Papa', 'Maman', 'Le chien', 'La soeur', 'le frère'];
+      
       var personne = ['assets/cadeau.jpg', 'assets/child.jpg', 'assets/diploma.jpg', 'assets/kid.jpg', 'assets/man.jpg', 'assets/mariage.jpg'];
+
       // random value of array
       var randomValue = pic[Math.floor(pic.length * Math.random())];
-      console.log(randomValue)
+      console.log(randomValue);
 
       var randomValue2 = titre[Math.floor(titre.length * Math.random())];
-      console.log(randomValue2)
+      console.log(randomValue2);
 
       var randomValue3 = personne[Math.floor(personne.length * Math.random())];
-      console.log(randomValue3)
-      var bar = document.getElementById('textFinal')
-      bar.innerHTML = texte + " " + randomValue + " " +"pour" +" "   +  randomValue2 + " " + randomValue3;
-      var x = document.getElementById('gift')
+      console.log(randomValue3);
+
+      var bar = document.getElementById('textFinal');
+      bar.innerHTML = texte + " " + randomValue + " " +"pour" +" "   +  randomValue2 + " ";
+
+      var x = document.getElementById('gift');
       x.setAttribute("src", randomValue3);
     }
+     // if (things1 == true) {
+
+     //    texte= "le cadeau idéal est";
+
+
+     //  }
+     //  else {
+     //    texte = " false ";
+     //  }
+
+     //  if (things2 == true) {
+
+     //    texte= "le cadeau ultime est";
+
+
+     //  }
+     //  else {
+     //    texte = " false ";
+     //  }
+
+     //  if (things3 == true) {
+
+     //    texte= "le cadeau fabuleux est";
+
+
+     //  }
+     //  else {
+     //    texte = " ";
+     //  }
+
+     //  if (things4 == true) {
+
+     //    texte= "le cadeau fantastique est";
+
+
+     //  }
+     //  else {
+     //    texte = " false ";
+     //  }
   </script>
 
   </body>
