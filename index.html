@@ -86,23 +86,29 @@
 
     <div class="row center">
       <div class="col s12"><h1>Sexe ?</h1> </div>
-      <div class="col s6 center"><input type="checkbox" name='thing5' id="thing5"/><label for="thing5"></label> </div>
-      <div class="col s6 center"><input type="checkbox" name='thing6' id="thing6"/><label for="thing6"></label> </div>
+      <div class="col s6 center"><input class="messageCheckbox" type="checkbox" name='thing5' id="thing5"/><label for="thing5"></label> </div>
+      <div class="col s6 center"><input class="messageCheckbox" type="checkbox" name='thing6' id="thing6"/><label for="thing6"></label> </div>
     </div>
     <!-- pour qui ? -->
     <div class="row">
-      <div class="center col s12"><h1>Pour qui ?</h1> </div>
-    <div class="col s12 m6 l3"><input type="checkbox" name='thing1' id="thing1"/><label for="thing1"></label></div>
-    <div class="col s12 m6 l3"> <input type="checkbox" name='thing2' id="thing2"/><label for="thing2"></label></div>
-    <div class="col s12 m6 l3"><input type="checkbox" name='thing3' id="thing3"/><label for="thing3"></label> </div>
-    <div class="col s12 m6 l3"><input type="checkbox" name='thing4' id="thing4"/><label for="thing4"></label> </div>
+      <div class="center col s12"><h1>Pour quoi ?</h1> </div>
+    <div class="col s12 m6 l3"><input class="messageCheckbox" type="checkbox" name='thing1' id="thing1"/><label for="thing1"></label></div>
+    <div class="col s12 m6 l3"> <input class="messageCheckbox" type="checkbox" name='thing2' id="thing2"/><label for="thing2"></label></div>
+    <div class="col s12 m6 l3"><input class="messageCheckbox" type="checkbox" name='thing3' id="thing3"/><label for="thing3"></label> </div>
+    <div class="col s12 m6 l3"><input class="messageCheckbox" type="checkbox" name='thing4' id="thing4"/><label for="thing4"></label> </div>
   </div>
   <!-- occasion -->
-  <div class="row">
+<!--   <div class="row">
     <div class="col s12 m6 l3"><img class="rounded" src="assets/"></div>
     <div class="col s12 m6 l3"><img class="rounded" src="assets/"></div>
     <div class="col s12 m6 l3"><img class="rounded" src="assets/"></div>
     <div class="col s12 m6 l3"><img class="rounded" src="assets/"></div>
+  </div> -->
+
+  <div class="center">
+    <a onclick="generateGift()" class="waves-effect waves-light btn">Cadeau idéal</a>
+    <h2 id="textFinal"></h2>
+    <img class="rounded " id="gift" src="">
   </div>
 
   </div>
@@ -150,6 +156,45 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script type="text/javascript">
+    function generateGift () {
+      var texte
+      var foo = document.getElementById('thing5').value
+      console.log(foo)
+
+     var checkedBox = document.querySelector('.messageCheckbox').checked;
+     // checkedBox = false;
+     console.log(checkedBox)
+
+      if (checkedBox == true) {
+
+        texte= "le cadeau est";
+
+
+      }
+      else {
+        texte = " ";
+      }
+
+      // tableau de cadeau
+      var pic = ['une trotinette', 'un vélo', 'un cours de français', 'un cours en ligne', 'un saut à lelastique', 'un pack culture'];
+      var titre = ['Mamy', 'Papa', 'Maman', 'Le chien', 'La soeur', 'le frère'];
+      var personne = ['assets/cadeau.jpg', 'assets/child.jpg', 'assets/diploma.jpg', 'assets/kid.jpg', 'assets/man.jpg', 'assets/mariage.jpg'];
+      // random value of array
+      var randomValue = pic[Math.floor(pic.length * Math.random())];
+      console.log(randomValue)
+
+      var randomValue2 = titre[Math.floor(titre.length * Math.random())];
+      console.log(randomValue2)
+
+      var randomValue3 = personne[Math.floor(personne.length * Math.random())];
+      console.log(randomValue3)
+      var bar = document.getElementById('textFinal')
+      bar.innerHTML = texte + " " + randomValue + " " +"pour" +" "   +  randomValue2 + " " + randomValue3;
+      var x = document.getElementById('gift')
+      x.setAttribute("src", randomValue3);
+    }
+  </script>
 
   </body>
 </html>
